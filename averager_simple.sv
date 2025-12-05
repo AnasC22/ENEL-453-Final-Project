@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name: averager_simple
-// 
+//  
 // Description: 
 // This module implements a moving average filter that performs oversampling and 
 // averaging to achieve increased resolution. It takes 8-bit input samples and 
