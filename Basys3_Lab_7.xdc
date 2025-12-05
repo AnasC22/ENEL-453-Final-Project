@@ -1,5 +1,5 @@
 ## This file is a general .xdc for the Basys3 rev B board
-## To use it in a project:
+## To use it in a project: 
 ## - uncomment the lines corresponding to used pins
 ## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project
 ## Xilinx part number XC7A35T-1CPG236C (from Reference Manual)
