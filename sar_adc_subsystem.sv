@@ -9,7 +9,7 @@ module sar_adc_subsystem #(
     input  logic sar_switch,
 
              
-    output logic done,        // 1 when conversion finished
+    output logic done,        // 1 when conversion finished 
     output logic [WIDTH-1:0] result,   // FINAL 8-bit output code
     output logic [WIDTH-1:0] dac_out,   // DAC value (result | mask)
     output logic sar_pwm_out
