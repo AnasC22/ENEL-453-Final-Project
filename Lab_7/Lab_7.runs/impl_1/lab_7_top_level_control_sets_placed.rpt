@@ -1,0 +1,101 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue Dec  2 17:47:39 2025
+| Host         : Anas running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab_7_top_level_control_sets_placed.rpt
+| Design       : lab_7_top_level
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    23 |
+|    Minimum number of control sets                        |    23 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    41 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    23 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    17 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |            9 |
+| No           | No                    | Yes                    |               2 |            1 |
+| No           | Yes                   | No                     |              55 |           23 |
+| Yes          | No                    | No                     |              72 |           58 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            1117 |          241 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+-----------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                       Enable Signal                       |                      Set/Reset Signal                      | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+-----------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+|  u_clk_wiz/inst/clk_out1 | FSM/sar_enable                                            | reset_IBUF                                                 |                3 |              8 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | R2R_ADC_SUBSYSTEM/r2r_captured_duty_cycle[7]_i_1_n_0      |                                                            |                4 |              8 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | SAR_ADC_SUBSYSTEM/result[7]_i_2_n_0                       | SAR_ADC_SUBSYSTEM/result[7]_i_1_n_0                        |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | SAR_ADC_SUBSYSTEM/mask[7]_i_1_n_0                         | SAR_ADC_SUBSYSTEM/result[7]_i_1_n_0                        |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | FSM/r2r_enable                                            | reset_IBUF                                                 |                4 |             10 |         2.50 |
+|  u_clk_wiz/inst/clk_out1 | SAR_PROC/ready_pulse                                      | reset_IBUF                                                 |                2 |             12 |         6.00 |
+|  u_clk_wiz/inst/clk_out1 | BIN2BCD/bcd_out[15]_i_1_n_0                               | reset_IBUF                                                 |                6 |             16 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | PWM_ADC_SUBSYSTEM/sawtooth_pwm_inst/downcounter_inst/zero | PWM_ADC_SUBSYSTEM/sawtooth_pwm_inst/duty_cycle[15]_i_1_n_0 |                5 |             16 |         3.20 |
+|  u_clk_wiz/inst/clk_out1 | PWM_ADC_SUBSYSTEM/captured_duty_cycle[15]_i_1_n_0         |                                                            |                6 |             16 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | R2R_ADC_SUBSYSTEM/sawtooth_pwm_inst/downcounter_inst/zero | R2R_ADC_SUBSYSTEM/sawtooth_pwm_inst/duty_cycle[7]_i_1_n_0  |                6 |             16 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | INPUT_SYNC/out8                                           | reset_IBUF                                                 |                5 |             17 |         3.40 |
+|  u_clk_wiz/inst/clk_out1 | FSM/pwm_enable                                            | reset_IBUF                                                 |                7 |             24 |         3.43 |
+|  u_clk_wiz/inst/clk_out1 |                                                           |                                                            |                9 |             25 |         2.78 |
+|  u_clk_wiz/inst/clk_out1 | BIN2BCD/scratch[31]_i_1_n_0                               | reset_IBUF                                                 |                7 |             32 |         4.57 |
+|  u_clk_wiz/inst/clk_out1 | ADC_PROC_R2R/scaled_adc_data_r2r[11]_i_1_n_0              |                                                            |                8 |             40 |         5.00 |
+|  u_clk_wiz/inst/clk_out1 | SAR_ADC_SUBSYSTEM/done                                    |                                                            |                8 |             40 |         5.00 |
+|  u_clk_wiz/inst/clk_out1 |                                                           | reset_IBUF                                                 |               24 |             57 |         2.38 |
+|  u_clk_wiz/inst/clk_out1 | ADC_PROC_PWM/scaled_adc_data_pwm[11]_i_1_n_0              |                                                            |               32 |            144 |         4.50 |
+|  u_clk_wiz/inst/clk_out1 | ADC_PROC_XADC/scaled_adc_data_xadc[11]_i_1_n_0            |                                                            |               32 |            144 |         4.50 |
+|  u_clk_wiz/inst/clk_out1 | SAR_ADC_SUBSYSTEM/done                                    | reset_IBUF                                                 |               23 |            150 |         6.52 |
+|  u_clk_wiz/inst/clk_out1 | ADC_PROC_R2R/scaled_adc_data_r2r[11]_i_1_n_0              | reset_IBUF                                                 |               28 |            162 |         5.79 |
+|  u_clk_wiz/inst/clk_out1 | ADC_PROC_PWM/scaled_adc_data_pwm[11]_i_1_n_0              | reset_IBUF                                                 |               70 |            319 |         4.56 |
+|  u_clk_wiz/inst/clk_out1 | ADC_PROC_XADC/scaled_adc_data_xadc[11]_i_1_n_0            | reset_IBUF                                                 |               71 |            319 |         4.49 |
++--------------------------+-----------------------------------------------------------+------------------------------------------------------------+------------------+----------------+--------------+
+
+

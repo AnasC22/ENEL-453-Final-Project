@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "seven_segment_display_subsystem_behav" "xil_defaultlib.seven_segment_display_subsystem" "xil_defaultlib.glbl" -log "elaborate.log" 

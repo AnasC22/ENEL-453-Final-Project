@@ -1,0 +1,386 @@
+
+*** Running vivado
+    with args -log lab_7_top_level.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab_7_top_level.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue Dec  2 17:45:26 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source lab_7_top_level.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/utils_1/imports/synth_1/lab_6_top_level.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/utils_1/imports/synth_1/lab_6_top_level.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top lab_7_top_level -part xc7a35tcpg236-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12572
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1040.527 ; gain = 469.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'pwm_out', assumed default net type 'wire' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:152]
+INFO: [Synth 8-11241] undeclared symbol 'done', assumed default net type 'wire' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:179]
+INFO: [Synth 8-11241] undeclared symbol 'R2R_out_internal', assumed default net type 'wire' [C:/Users/chowd/ENEL 453/Labs/Lab_7/pwm_ramp_adc_subsystem.sv:69]
+INFO: [Synth 8-11241] undeclared symbol 'pwm_out_internal', assumed default net type 'wire' [C:/Users/chowd/ENEL 453/Labs/Lab_7/r2r_adc_subsystem.sv:68]
+INFO: [Synth 8-11241] undeclared symbol 'ready_pulse', assumed default net type 'wire' [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/sources_1/new/sar_processing.sv:64]
+INFO: [Synth 8-6157] synthesizing module 'lab_7_top_level' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.runs/synth_1/.Xil/Vivado-19380-Anas/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.runs/synth_1/.Xil/Vivado-19380-Anas/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'input_sync' [C:/Users/chowd/ENEL 453/Labs/Lab_7/input_sync.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'input_sync' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/input_sync.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'output_mode_fsm' [C:/Users/chowd/ENEL 453/Labs/Lab_7/output_mode_fsm.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'output_mode_fsm' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/output_mode_fsm.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.runs/synth_1/.Xil/Vivado-19380-Anas/realtime/xadc_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.runs/synth_1/.Xil/Vivado-19380-Anas/realtime/xadc_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'pwm_adc_subsystem' [C:/Users/chowd/ENEL 453/Labs/Lab_7/pwm_ramp_adc_subsystem.sv:23]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6157] synthesizing module 'sawtooth_generator' [C:/Users/chowd/ENEL 453/Labs/Lab_7/sawtooth_waveform.sv:4]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter CLOCK_FREQ bound to: 32'sb00001011000001101110000001000000 
+	Parameter WAVE_FREQ bound to: 10.000000 - type: double 
+INFO: [Synth 8-6157] synthesizing module 'downcounter' [C:/Users/chowd/ENEL 453/Labs/Lab_7/downcounter.sv:1]
+	Parameter PERIOD bound to: 141 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'downcounter' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/downcounter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'pwm' [C:/Users/chowd/ENEL 453/Labs/Lab_7/pwm.sv:1]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'pwm' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/pwm.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'sawtooth_generator' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/sawtooth_waveform.sv:4]
+WARNING: [Synth 8-689] width (1) of port connection 'R2R_out' does not match port width (16) of module 'sawtooth_generator' [C:/Users/chowd/ENEL 453/Labs/Lab_7/pwm_ramp_adc_subsystem.sv:69]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_adc_subsystem' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/pwm_ramp_adc_subsystem.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'r2r_adc_subsystem' [C:/Users/chowd/ENEL 453/Labs/Lab_7/r2r_adc_subsystem.sv:23]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6157] synthesizing module 'sawtooth_generator__parameterized0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/sawtooth_waveform.sv:4]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter CLOCK_FREQ bound to: 32'sb00000101111101011110000100000000 
+	Parameter WAVE_FREQ bound to: 1.000000 - type: double 
+INFO: [Synth 8-6157] synthesizing module 'downcounter__parameterized0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/downcounter.sv:1]
+	Parameter PERIOD bound to: 763 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'downcounter__parameterized0' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/downcounter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'sawtooth_generator__parameterized0' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/sawtooth_waveform.sv:4]
+WARNING: [Synth 8-689] width (8) of port connection 'R2R_out' does not match port width (16) of module 'sawtooth_generator__parameterized0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/r2r_adc_subsystem.sv:69]
+WARNING: [Synth 8-7071] port 'duty_cycle' of module 'sawtooth_generator' is unconnected for instance 'sawtooth_pwm_inst' [C:/Users/chowd/ENEL 453/Labs/Lab_7/r2r_adc_subsystem.sv:64]
+WARNING: [Synth 8-7023] instance 'sawtooth_pwm_inst' of module 'sawtooth_generator' has 6 connections declared, but only 5 given [C:/Users/chowd/ENEL 453/Labs/Lab_7/r2r_adc_subsystem.sv:64]
+INFO: [Synth 8-6155] done synthesizing module 'r2r_adc_subsystem' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/r2r_adc_subsystem.sv:23]
+WARNING: [Synth 8-689] width (16) of port connection 'r2r_internal' does not match port width (8) of module 'r2r_adc_subsystem' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:163]
+WARNING: [Synth 8-689] width (16) of port connection 'r2r_captured_duty_cycle' does not match port width (8) of module 'r2r_adc_subsystem' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:164]
+INFO: [Synth 8-6157] synthesizing module 'sar_adc_subsystem' [C:/Users/chowd/ENEL 453/Labs/Lab_7/sar_adc_subsystem.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'downcounter__parameterized1' [C:/Users/chowd/ENEL 453/Labs/Lab_7/downcounter.sv:1]
+	Parameter PERIOD bound to: 32'sb00000000000111101000010010000000 
+INFO: [Synth 8-6155] done synthesizing module 'downcounter__parameterized1' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/downcounter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'sar_pwm' [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/sources_1/new/sar_pwm.sv:1]
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sar_pwm' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/sources_1/new/sar_pwm.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'sar_adc_subsystem' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/sar_adc_subsystem.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'adc_processing' [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'averager' [C:/Users/chowd/ENEL 453/Labs/Lab_7/averager.sv:1]
+	Parameter power bound to: 32'sb00000000000000000000000000001000 
+	Parameter N bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'averager' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/averager.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'adc_processing' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing.sv:11]
+WARNING: [Synth 8-7071] port 'ready_pulse' of module 'adc_processing' is unconnected for instance 'ADC_PROC_XADC' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:183]
+WARNING: [Synth 8-7023] instance 'ADC_PROC_XADC' of module 'adc_processing' has 7 connections declared, but only 6 given [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:183]
+INFO: [Synth 8-6157] synthesizing module 'adc_processing_pwm' [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing_pwm.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'adc_processing_pwm' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing_pwm.sv:11]
+WARNING: [Synth 8-7071] port 'ready_pulse' of module 'adc_processing_pwm' is unconnected for instance 'ADC_PROC_PWM' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:192]
+WARNING: [Synth 8-7023] instance 'ADC_PROC_PWM' of module 'adc_processing_pwm' has 7 connections declared, but only 6 given [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:192]
+INFO: [Synth 8-6157] synthesizing module 'adc_processing_r2r' [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing_r2r.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'averager__parameterized0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/averager.sv:1]
+	Parameter power bound to: 32'sb00000000000000000000000000000111 
+	Parameter N bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6155] done synthesizing module 'averager__parameterized0' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/averager.sv:1]
+WARNING: [Synth 8-689] width (16) of port connection 'Q' does not match port width (8) of module 'averager__parameterized0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing_r2r.sv:75]
+INFO: [Synth 8-6155] done synthesizing module 'adc_processing_r2r' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/adc_processing_r2r.sv:34]
+WARNING: [Synth 8-689] width (16) of port connection 'r2r_data' does not match port width (8) of module 'adc_processing_r2r' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:207]
+WARNING: [Synth 8-7071] port 'ready_pulse' of module 'adc_processing_r2r' is unconnected for instance 'ADC_PROC_R2R' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:202]
+WARNING: [Synth 8-7023] instance 'ADC_PROC_R2R' of module 'adc_processing_r2r' has 7 connections declared, but only 6 given [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:202]
+INFO: [Synth 8-6157] synthesizing module 'sar_processing' [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/sources_1/new/sar_processing.sv:34]
+WARNING: [Synth 8-689] width (16) of port connection 'Q' does not match port width (8) of module 'averager__parameterized0' [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/sources_1/new/sar_processing.sv:74]
+INFO: [Synth 8-6155] done synthesizing module 'sar_processing' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.srcs/sources_1/new/sar_processing.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'mux_data_en' [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux_data_en.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux_data_en' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux_data_en.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'bin_to_bcd' [C:/Users/chowd/ENEL 453/Labs/Lab_7/bin_to_bcd.sv:43]
+INFO: [Synth 8-6155] done synthesizing module 'bin_to_bcd' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/bin_to_bcd.sv:43]
+WARNING: [Synth 8-689] width (8) of port connection 'result_code' does not match port width (16) of module 'mux_data_en' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:243]
+INFO: [Synth 8-6157] synthesizing module 'auto_cal' [C:/Users/chowd/ENEL 453/Labs/Lab_7/auto_cal.sv:23]
+	Parameter WIDTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'auto_cal' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/auto_cal.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux4_16_bits' [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux4_16_bits.sv:1]
+INFO: [Synth 8-226] default block is never used [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux4_16_bits.sv:12]
+INFO: [Synth 8-226] default block is never used [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux4_16_bits.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'mux4_16_bits' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux4_16_bits.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_display_subsystem' [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_display_subsystem.sv:26]
+INFO: [Synth 8-6157] synthesizing module 'digit_multiplexor' [C:/Users/chowd/ENEL 453/Labs/Lab_7/digit_multiplexor.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'digit_multiplexor' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/digit_multiplexor.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_digit_selector' [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_digit_selector.sv:36]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_digit_selector' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_digit_selector.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'seven_segment_decoder' [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_decoder.sv:37]
+INFO: [Synth 8-226] default block is never used [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_decoder.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_decoder' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_decoder.sv:37]
+INFO: [Synth 8-6155] done synthesizing module 'seven_segment_display_subsystem' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/seven_segment_display_subsystem.sv:26]
+INFO: [Synth 8-6157] synthesizing module 'mux2_16_bits' [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux2_16_bits.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux2_16_bits' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/mux2_16_bits.sv:1]
+WARNING: [Synth 8-689] width (16) of port connection 'in0' does not match port width (8) of module 'mux2_16_bits' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:291]
+WARNING: [Synth 8-7071] port 'in2' of module 'mux2_16_bits' is unconnected for instance 'SAR_R2R_OUTPUT_MUX' [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:290]
+WARNING: [Synth 8-7023] instance 'SAR_R2R_OUTPUT_MUX' of module 'mux2_16_bits' has 8 connections declared, but only 7 given [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:290]
+INFO: [Synth 8-6155] done synthesizing module 'lab_7_top_level' (0#1) [C:/Users/chowd/ENEL 453/Labs/Lab_7/lab_7_top_level.sv:12]
+WARNING: [Synth 8-6014] Unused sequential element ready_reg was removed.  [C:/Users/chowd/ENEL 453/Labs/Lab_7/bin_to_bcd.sv:59]
+WARNING: [Synth 8-7129] Port in2[7] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[6] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[5] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[4] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[3] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[2] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[1] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in2[0] in module mux2_16_bits is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module input_sync is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1173.691 ; gain = 602.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1173.691 ; gain = 602.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1173.691 ; gain = 602.223
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1173.691 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XADC_INST'
+Finished Parsing XDC File [c:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.gen/sources_1/ip/xadc_wiz_0/xadc_wiz_0/xadc_wiz_0_in_context.xdc] for cell 'XADC_INST'
+Parsing XDC File [c:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Finished Parsing XDC File [c:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Parsing XDC File [C:/Users/chowd/ENEL 453/Labs/Lab_7/Basys3_Lab_7.xdc]
+Finished Parsing XDC File [C:/Users/chowd/ENEL 453/Labs/Lab_7/Basys3_Lab_7.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/chowd/ENEL 453/Labs/Lab_7/Basys3_Lab_7.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab_7_top_level_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lab_7_top_level_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1260.898 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1260.898 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1260.898 ; gain = 689.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1260.898 ; gain = 689.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in. (constraint file  {c:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in. (constraint file  {c:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for XADC_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_clk_wiz. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1260.898 ; gain = 689.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1260.898 ; gain = 689.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input   24 Bit       Adders := 2     
+	   2 Input   21 Bit       Adders := 1     
+	   3 Input   17 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   4 Input   15 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               26 Bit    Registers := 2     
+	               24 Bit    Registers := 2     
+	               21 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 524   
+	               15 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 261   
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	   2 Input   31 Bit        Muxes := 1     
+	   3 Input   26 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   13 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1260.898 ; gain = 689.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1406.820 ; gain = 835.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1453.434 ; gain = 881.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1633.277 ; gain = 1061.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1633.277 ; gain = 1061.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1633.277 ; gain = 1061.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|averager    | REG_ARRAY_reg[256][15] | 256    | 32    | YES          | NO                 | YES               | 0      | 256     | 
+|averager    | REG_ARRAY_reg[128][7]  | 128    | 16    | YES          | NO                 | YES               | 0      | 64      | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name        | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|adc_processing     | (A*B)'      | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|adc_processing_pwm | (A*B)'      | 16     | 9      | -      | -      | 25     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|adc_processing_r2r | ((A*B)')'   | 8      | 17     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|sar_processing     | ((A*B)')'   | 8      | 17     | -      | -      | 25     | 0    | 0    | -    | -    | -     | 1    | 1    | 
++-------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |xadc_wiz_0    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |xadc_wiz |     1|
+|3     |CARRY4   |    55|
+|4     |DSP48E1  |     4|
+|6     |LUT1     |    30|
+|7     |LUT2     |   147|
+|8     |LUT3     |    76|
+|9     |LUT4     |   144|
+|10    |LUT5     |    67|
+|11    |LUT6     |   103|
+|12    |SRLC32E  |   320|
+|13    |FDCE     |     2|
+|14    |FDRE     |  1242|
+|15    |FDSE     |    27|
+|16    |IBUF     |    12|
+|17    |OBUF     |    37|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1633.277 ; gain = 1061.809
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1633.277 ; gain = 974.602
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1633.277 ; gain = 1061.809
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1633.277 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1633.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 5be10da8
+INFO: [Common 17-83] Releasing license: Synthesis
+89 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1633.277 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/chowd/ENEL 453/Labs/Lab_7/Lab_7/Lab_7.runs/synth_1/lab_7_top_level.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file lab_7_top_level_utilization_synth.rpt -pb lab_7_top_level_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec  2 17:46:49 2025...
